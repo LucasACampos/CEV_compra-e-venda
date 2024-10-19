@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  api:
+    build:
+      ./cev-api
+    container_name: cev-api
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - wiremock
+  wiremock:
+    image: rodolpheche/wiremock
+    volumes:
+      - ./wiremock/__files:/home/wiremock/__files
+      - ./wiremock/mappings:/home/wiremock/mappings
+    ports:
+      - 8081:8080
