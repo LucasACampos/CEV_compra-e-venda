@@ -1,16 +1,19 @@
 version: "3.7"
 services:
-  api:
+  cev-api-compose:
     build:
       ./cev-api
-    container_name: cev-api
+    container_name: cev-api-compose
     restart: always
     ports:
       - 8080:8080
     depends_on:
       - wiremock
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
   wiremock:
     image: rodolpheche/wiremock
+    container_name: wiremock
     volumes:
       - ./wiremock/__files:/home/wiremock/__files
       - ./wiremock/mappings:/home/wiremock/mappings

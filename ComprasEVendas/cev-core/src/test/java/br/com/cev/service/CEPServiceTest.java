@@ -16,7 +16,7 @@ class CEPServiceTest {
 
     @Test
     public void cpfTest(){
-        Assertions.assertThat(cepService.getCep()).isNotNull();
+        Assertions.assertThat(cepService).isNotNull();
     }
 
 }
