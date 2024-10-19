@@ -17,4 +17,9 @@ public class CepRestController extends AbstractRestController {
     public String getCep(){
         return cepService.getCep();
     }
+
+    @GetMapping("/logged/teste")
+    public String teste(){
+        return "teste";
+    }
 }
