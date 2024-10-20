@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4dc4aeae-5575-499d-8f5c-7ad349a5246f",
+		"name": "CEV - Compras e vendas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9357111"
+	},
+	"item": [
+		{
+			"name": "Produto get list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/produto",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto get id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/produto/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Produto via api\",\n    \"preco\":\"100\",\n    \"descricao\":\"descricao via api\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/produto",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"6\",\n    \"nome\":\"Produto via api atualizando put\",\n    \"preco\":\"100\",\n    \"descricao\":\"descricao via api put\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/produto",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 6,\n    \"nome\":\"Produto via api atualizando patch\",\n    \"preco\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/produto",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/produto/6",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"produto",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca cep (mockado)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/cep?cep=1",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"cep"
+					],
+					"query": [
+						{
+							"key": "cep",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
