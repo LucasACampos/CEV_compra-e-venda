@@ -33,7 +33,7 @@ public class ProdutoRestController extends AbstractRestController{
 
         return produtoDao
                 .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.badRequest().build());
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping()

@@ -15,3 +15,17 @@ CREATE TABLE cev.request_log (
 	horario timestamp(6) NULL,
 	response text NULL
 );
+
+alter table cev.request_log add column argumentos text;
+
+create sequence cev.repository_log_id_seq;
+create table cev.repository_log(
+	id int8 primary key default nextval('cev.repository_log_id_seq'),
+	metodo varchar(255),
+	argumentos text,
+	horario timestamp,
+	response text
+);
+
+alter table cev.request_log add column request_id uuid;
+alter table cev.repository_log add column request_id uuid;
