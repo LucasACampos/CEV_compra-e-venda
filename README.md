@@ -3,7 +3,7 @@ Site para um projeto de marketplace
 
 # Estrutura atual do projeto
 
-<iframe src="https://drive.google.com/file/d/1XUyTnJQUFiD7ZSzl2FvDql6rzMjLmtwl/preview" width="640" height="480" allow="autoplay"></iframe>
+![Estrutura do projeto](https://drive.google.com/file/d/1XUyTnJQUFiD7ZSzl2FvDql6rzMjLmtwl/preview)
 
 # Links uteis
 - Swagger da api: http://ec2-44-215-112-249.compute-1.amazonaws.com:8080/swagger
