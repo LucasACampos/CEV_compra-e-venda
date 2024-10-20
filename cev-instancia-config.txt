@@ -1,0 +1,14 @@
+#/bin/bash
+apt-get update -y
+sudo snap install docker
+sudo apt-get install unzip -y
+sudo apt-get install zip -y
+reset
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java 17.0.12-tem
+sdk install maven
+git clone https://github.com/LucasACampos/CEV_compra-e-venda.git -q
+cd CEV_compra-e-venda/ComprasEVendas/
+mvn package
+sudo docker compose up -d
