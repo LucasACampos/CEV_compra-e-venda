@@ -1,17 +1,17 @@
+create schema cev;
+
+create sequence cev.produto_id_seq;
 CREATE TABLE cev.produto (
-	id int8 NOT NULL,
+	id int8 primary key default nextval('cev.produto_id_seq'),
 	descricao varchar(255) NULL,
 	nome varchar(255) NULL,
-	preco numeric(38, 2) NULL,
-	CONSTRAINT produto_pkey PRIMARY KEY (id)
+	preco numeric(38, 2) NULL
 );
 
+create sequence cev.request_log_id_seq;
 CREATE TABLE cev.request_log (
-	id int8 NOT NULL,
+	id int8 primary key default nextval('cev.request_log_id_seq'),
 	endpoint varchar(255) NULL,
 	horario timestamp(6) NULL,
-	response oid NULL,
-	CONSTRAINT request_log_pkey PRIMARY KEY (id)
+	response text NULL
 );
-
-alter table cev.request_log alter column response type text;
