@@ -42,3 +42,12 @@ Certifique-se de ter o Docker instalado em sua máquina.
    docker compose up --build
    ```
    Este comando compilará a aplicação e subirá os containers necessários.
+
+## Melhorias
+
+Lista de melhorias que gostaria de implementar mais ainda não tive tempo
+
+- Criação de usuarios, utilizando jwt para logar na aplicação e salvar usuario nos logs
+- Bloqueio de certos end-points caso o usuario não esteja logado (Ex: deletar produto)
+- Conexão com S3 para salvar imagens dos produtos
+- Consumir a api em um sistema nextJS e criar uma interface do marketplace
