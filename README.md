@@ -51,3 +51,4 @@ Lista de melhorias que gostaria de implementar mais ainda não tive tempo
 - Bloqueio de certos end-points caso o usuario não esteja logado (Ex: deletar produto)
 - Conexão com S3 para salvar imagens dos produtos
 - Consumir a api em um sistema nextJS e criar uma interface do marketplace
+- Calculo de frete utilizando cep informado
